@@ -1,0 +1,17 @@
+#!/bin/bash
+copy_mainwindow(){
+    cp `pwd`/ui_template/mainwindow/mainwindow.h ./include/
+    cp `pwd`/ui_template/mainwindow/mainwindow.cpp ./src/
+    cp `pwd`/ui_template/mainwindow/mainwindow.ui ./ui/
+}
+copy_widget(){
+    cp `pwd`/ui_template/widget/widget.h ./include/
+     cp `pwd`/ui_template/widget/widget.cpp ./src/
+    cp `pwd`/ui_template/widget/widget.ui ./ui/
+}
+
+if [ "$1" == "mainwindow" ];
+then copy_mainwindow
+elif [ "$1" == "widget" ];
+then copy_widget
+fi
